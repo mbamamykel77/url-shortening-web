@@ -5,10 +5,9 @@
 
 ## The challenge
 
-Your challenge is to build out this landing page, integrate with the [shrtcode API](https://app.shrtco.de/) and get it looking as close to the design as possible.
+The challenge is to build out this landing page, integrate with the [shrtcode API](https://app.shrtco.de/)
 
-Your users should be able to:
-
+Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - Shorten any valid URL
 - See a list of their shortened links, even after refreshing the browser
