@@ -15,6 +15,7 @@ body {
   --Grayish-Violet: hsl(257, 7%, 63%);
   --Very-Dark-Blue: hsl(255, 11%, 22%);
   --Very-Dark-Violet: hsl(260, 8%, 14%);
+  margin-bottom: 5rem;
 }
 
 .headerContainer h2 {
@@ -93,29 +94,26 @@ body {
   width: 1.3rem;
 }
 .openDiv {
-  margin-top: 1rem;
   position: absolute;
 }
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  color: white;
+  background-color: green;
   border: none;
-  /* margin-left: 18rem; */
+  margin-left: 18rem;
 }
 
 .openbtn:hover {
-  background-color: #444;
+  background-color: orange;
 }
 
 /* body section */
 .illustration-working {
-  margin-top: 4rem;
-  /* position: fixed; */
   margin-top: 1rem;
 }
 .illustration-working img {
-  width: 26rem;
+  width: 90%;
   margin-left: 1rem;
 }
 
@@ -142,25 +140,98 @@ body {
   background-color: var(--cyan);
   margin-top: 1rem;
   text-align: center;
-  margin-left: 4rem;
+  margin-left: 5rem;
   margin-top: 2rem;
   cursor: pointer;
 }
 
-.mainBtn button{
-    color: white;
-    border: none;
-    background-color: var(--cyan);
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
+.mainBtn button {
+  color: white;
+  border: none;
+  background-color: var(--cyan);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
+/* section 2 */
+.section2 {
+    background-color: ghostwhite;
+    margin-top: 10rem;
+    height: 25rem;
+    width: 100%;
+    padding-top: 2rem;
+}
+/* form section */
+.form_container {
+  position: absolute;
+  margin-top: -6rem;
+  background-color: var(--Very-Dark-Violet);
+  background-image: url(./images/bg-shorten-mobile.svg);
+  width: 90%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  border-radius: 0.7rem;
+}
 
+.form input {
+  height: 3.2rem;
+  border: none;
+  padding-left: 0.4rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.form input::placeholder {
+  color: var(--Grayish-Violet);
+}
 
+.form_text {
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.8rem 0rem 0.8rem 0rem;
+  background-color: var(--cyan);
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form_text p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.form_text input {
+  color: white;
+  border: none;
+  background-color: var(--cyan);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
+/* statisics section */
+.statistics{
+    margin-top: 8rem;
+}
+.statistics h2 {
+    color: var(--Dark-Violet);
+    text-align: center;
+}
 
+.statistics p {
+    text-align: center;
+    color: var(--Grayish-Violet);
+    margin-top: 1rem;
+}
 
 
 
@@ -172,17 +243,13 @@ body {
 /* ================================================= */
 
 @media (min-width: 768px) {
+
   /* header section */
   .headerContainer {
     margin-top: 2rem;
-    margin-left: 4rem;
+    margin-left: 6rem;
     display: flex;
     flex-direction: row;
-  }
-
-  .headerContainer h2 {
-    font-size: 2rem;
-    color: var(--Dark-Violet);
   }
 
   .header_link {
@@ -219,11 +286,8 @@ body {
 
   .header_link2 button {
     margin-top: 20px;
-    border: none;
-    border-radius: 5rem;
     height: 2.5rem;
     width: 7rem;
-    background-color: var(--cyan);
   }
   .header_link2 button a {
     color: white;
@@ -245,33 +309,82 @@ body {
 
 
   /* body section */
-.bodyContainer {
+  .bodyContainer {
     display: flex;
     flex-direction: row-reverse;
     margin-top: 3rem;
-    margin-left: 5.6rem;
-}
+    margin-left: 7.6rem;
+  }
 
-.illustration-working img {
-    width: 44rem;
-    margin-right: -5rem;
-    /* overflow: hidden; */
-}
+  .illustration-working img {
+    width: 40rem;
+  }
 
-.mainText{
+  .mainText {
     font-size: 3rem;
-    /* width: 100%; */
     text-align: start;
-}
+  }
 
-.subText {
+  .subText {
     width: 80%;
     text-align: start;
     margin-left: -0.1rem;
-    margin-top: -1rem;
-}
+    margin-top: -0.5rem;
+    font-size: 1.2rem;
+  }
 
-.mainBtn {
+  .mainBtn {
     margin-left: -0.2rem;
+  }
+  .mainBtn p {
+    font-size: 1.2rem;
+  }
+
+
+  /* form section */
+  .form_container {
+    width: 82%;
+    margin-left: 7rem;
+    display: flex;
+    flex-direction: row;
+    background-image: url(./images/bg-shorten-desktop.svg);
+  }
+
+  .form input {
+    width: 48rem;
+    height: 4rem;
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    margin-left: -1rem;
+  }
+
+  .form_text {
+    height: 4rem;
+    width: 12rem;
+    margin-top: -4rem;
+    margin-left: 50rem;
+  }
+
+  .form_text input {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  /* statistics section */
+  .statistics{
+    margin-top: 9rem;
+}
+.statistics h2 {
+    font-size: 2.5rem;
+}
+.statistics_text{
+    width: 38%;
+    text-align: center;
+    margin: auto;
+}
+.statistics p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.1rem;
 }
 }
