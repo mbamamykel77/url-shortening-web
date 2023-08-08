@@ -1,14 +1,12 @@
-function openNav() {
-    document.getElementById("mySidepanel").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidepanel").style.width = "0";
-  }
 
-// let closeBtn = document.querySelector('.closebtn')
-// let body = document.querySelector('body')
+function myFunction(x) {
+  x.classList.toggle("change");
+}
 
-// closeBtn.addEventListener('change', () => {
-//     body.classList.toggle('openDiv');
-//   })
+function openSlideMenu(){
+  document.getElementById('burger-menu').classList.toggle("open");
+}
+
+function closeSlideMenu(){
+  document.getElementById('burger-menu').style.width = '0px';
+}
