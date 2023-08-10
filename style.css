@@ -202,7 +202,7 @@ body {
 
 .form input {
   height: 3.2rem;
-  border: none;
+  border: 3px solid transparent;
   padding-left: 0.4rem;
   font-weight: bold;
   border-radius: 0.4rem;
@@ -242,6 +242,108 @@ body {
   font-size: 1rem;
   cursor: pointer;
 }
+.alert_text {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+
+
+/* link output */
+.link_output {
+  /* display: none; */
+  margin-top: 6rem;
+  background-color: white;
+  padding-bottom: 2rem;
+  text-align: center;
+  width: 90%;
+  border-radius: 0.7rem;
+  margin-bottom: -5rem;
+}
+
+.input_res p{
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+.input_link {
+  margin-top: 1rem;
+  color: var(--cyan);
+}
+.input_button {
+  border: none;
+  border-radius: 0.4rem;
+  width: 17rem;
+  background-color: var(--cyan);
+  text-align: center;
+  cursor: pointer;
+}
+.input_button button {
+  color: white;
+  border: none;
+  background-color: var(--cyan);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ====================================== */
+.tooltip {
+  position: relative;
+  /* display: inline-block; */
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.8rem 0rem 0.8rem 0rem;
+  width: 17rem;
+  background-color: var(--cyan);
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.tooltip button {
+  color: white;
+  border: none;
+  background-color: var(--cyan);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: var(--Dark-Violet);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  /* bottom: 100%; */
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -4rem;
+}
+/* ============================================ */
 
 
 /* statisics section */
@@ -543,6 +645,11 @@ body {
     height: 65rem;
   }
 
+    /* link output */
+    .link_output {
+      width: 82%;
+      display: none;
+    }
 
   /* card section */
   .card_container {

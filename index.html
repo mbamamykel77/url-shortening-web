@@ -77,16 +77,32 @@
           <div class="form_container">
             <form action="#">
               <div class="form">
-                <input
-                  type="text"
-                  id="link"
-                  placeholder="Shorten a link here..."
-                />
+                <input type="text" value="" id="link"
+                  placeholder="Shorten a link here..."/>
+              </div>
+              <div class="alert_text">
+                <p><em> Please add a link </em></p>
               </div>
               <div class="form_text">
                 <input type="submit" value="Shorten It!" />
               </div>
             </form>
+          </div>
+
+          <div class="link_output">
+            <div class="input_res">
+            </div>
+            <div class="input_link">
+            https://www.linkedin.com/in/chigozie-mbama-480888118
+            </div>
+
+            <div class="tooltip">
+              <button class="resButton" onclick="myFunctions()" onmouseout="outFunc()">
+              <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+              Copy text
+              </button>
+              </div>
+
           </div>
 
           <!-- statistics section -->
