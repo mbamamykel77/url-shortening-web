@@ -226,6 +226,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .form_text:hover {
   opacity: 0.4;
@@ -240,7 +241,6 @@ body {
   background-color: var(--cyan);
   font-weight: bold;
   font-size: 1rem;
-  cursor: pointer;
 }
 .alert_text {
   color: red;
@@ -251,7 +251,7 @@ body {
 
 /* link output */
 .link_output {
-  /* display: none; */
+  display: none;
   margin-top: 6rem;
   background-color: white;
   padding-bottom: 2rem;
@@ -719,5 +719,27 @@ body {
   .footer_image img {
     width: 45%;
     height: 15%;
+  }
+
+  .link_output {
+    display: none;
+  }
+
+  .input_res {
+    margin-top: 3rem;
+    width: 25rem;
+    margin-left: 1rem;
+  }
+  .input_res p{
+    border-bottom: none;
+  }
+  .input_link {
+    margin-top: 3rem;
+    width: 20rem;
+    margin-left: 12rem;
+  }
+  .tooltip {
+    margin-top: 3rem;
+    width: 8rem;
   }
 }

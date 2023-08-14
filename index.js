@@ -18,7 +18,6 @@ function displayForm(event) {
     event.preventDefault();
     alert_text.style.display = "none"
     input_link.style.borderColor = "transparent";
-    output.style.display = "inline";
     output.style.height = "auto";
     output.style.textAlign = "start";
     inputRes.style.padding = "1rem";
@@ -26,7 +25,6 @@ function displayForm(event) {
     input_res.textContent = input_link.value;
     input_res.style.display = "block";
     input_res.style.marginTop = "30px";
-    input_res.style.borderBottom = "1px solid gray";
     input_res.style.padding = "1rem";
     input_res.style.wordWrap = "break-word";
 
@@ -38,8 +36,13 @@ function displayForm(event) {
 function adjustLayout() {
   if (window.innerWidth < 1040) {
     section2.style.paddingBottom = "128rem";
+    output.style.display = "block";
+    input_res.style.borderBottom = "1px solid gray";
   } else {
     section2.style.paddingBottom = "80rem";
+    input_res.style.borderBottom = "none";
+    output.style.display = "flex";
+    output.style.height = "10rem";
   }
 }
 formButton.addEventListener("click", displayForm);
@@ -49,21 +52,20 @@ formButton.addEventListener("click", displayForm);
 // function to copy text
 function myFunctions() {
   let copyText = inputRes.textContent;
-
-  let tempTextarea = document.createElement("textarea");
-  tempTextarea.value = copyText;
-  document.body.appendChild(tempTextarea);
-
-  tempTextarea.select();
-  tempTextarea.setSelectionRange(0, 99999);
-
+  resButton.innerText = "Copied!";
+  
+  let tooltipDiv = document.querySelector(".tooltip");
+  tooltipDiv.style.backgroundColor = "hsl(257, 27%, 26%)"
+  resButton.style.backgroundColor = "hsl(257, 27%, 26%)"
+  
   navigator.clipboard.writeText(copyText);
-  let tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied!";
 }
 function outFunc() {
-  let tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
+  resButton.innerText = "Copy";
+
+  let tooltipDiv = document.querySelector(".tooltip");
+  tooltipDiv.style.backgroundColor = "hsl(180, 66%, 49%)"
+  resButton.style.backgroundColor = "hsl(180, 66%, 49%)"
 }
 
 
