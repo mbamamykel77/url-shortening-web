@@ -8,7 +8,7 @@ let alert_text = document.querySelector(".alert_text");
 let resButton = document.querySelector(".resButton")
 
 
-function displayForm(event) {
+ async function displayForm(event) {
   if (input_link.value === "") {
     output.style.display = "none";
     event.preventDefault();
@@ -31,6 +31,11 @@ function displayForm(event) {
     // Add event listener for screen size changes
     window.addEventListener("resize", adjustLayout);
     adjustLayout();
+    // api
+    const result = await fetch(`https://api.shrtco.de/v2/shorten?url=${input_link.value}`);
+    let data = await result.json();
+    inputRes.textContent = data.result.full_short_link;
+    // console.log(data)
   }
 }
 function adjustLayout() {
@@ -53,7 +58,7 @@ formButton.addEventListener("click", displayForm);
 function myFunctions() {
   let copyText = inputRes.textContent;
   resButton.innerText = "Copied!";
-  
+
   let tooltipDiv = document.querySelector(".tooltip");
   tooltipDiv.style.backgroundColor = "hsl(257, 27%, 26%)"
   resButton.style.backgroundColor = "hsl(257, 27%, 26%)"
@@ -68,7 +73,7 @@ function outFunc() {
   resButton.style.backgroundColor = "hsl(180, 66%, 49%)"
 }
 
-
+// Sending the response link to another tab when clicked on.
 inputRes.addEventListener("click", function() {
   let url = inputRes.textContent;
 
